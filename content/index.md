@@ -14,8 +14,21 @@ tags:
 
 
 ---
-## 
+## Content Overview
 
+### Domain 1: General Security Concepts
+
+
+### Domain 2: Threats, Vulnerabilities, and Mitigations
+
+
+### Domain 3: Security Architecture
+
+
+### Domain 4: Security Operations
+
+
+### Domain 5: Security Program Manegement and Oversight
 
 
 
@@ -43,7 +56,7 @@ Here's a sentence with a footnote. [^1]
 
 
 TODO
-more about why textbook is great
+more about why textbook is great, exam obj, exercise questions
 how to do caution/warning banner?
 packt section
 
