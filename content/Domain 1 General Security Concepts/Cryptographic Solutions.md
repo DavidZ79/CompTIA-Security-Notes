@@ -1,102 +1,428 @@
 ---
-title: Cryptographic Solutions
-description: 
+title: 🔑 Cryptographic Solutions
+description: Comprehensive guide to cryptographic solutions including PKI, encryption, hashing, digital signatures, and key management for CompTIA Security+
 draft: false
 tags:
   - CompTIA
+  - Domain 1
+  - Cryptography
+  - PKI
+  - Encryption
 ---
 
-Public Key Infrastructure (PKI)
+> [!quote] Definition
+> **Cryptography** is the practice and study of techniques for secure communication and data protection in the presence of adversaries. It provides confidentiality, integrity, authentication, and non-repudiation.
 
-Public key: Encrypt and validate digital signatures
+## Public Key Infrastructure (PKI)
 
-Identify a public key: format is Public-Key Cryptography Standards (PKCS) P7b, file extention is .cer
+**Framework for managing digital certificates and public key encryption**
 
-Private key: Decryption, generates digital signatures, provides non-repudiation
+<details>
+<summary><strong>PKI Components</strong></summary>
 
-Identify a private key: format is PKCS P12, file extention is .pfx
+**Public Key:**
+- **Purpose** - Encrypt data and validate digital signatures
+- **Format** - Public-Key Cryptography Standards (PKCS) P7b
+- **File Extension** - `.cer` (certificate files)
+- **Distribution** - Freely shared and distributed
 
-Key escrow: Trusted third party for storing keys. Store using Hardware Securty Module (HSM)
+**Private Key:**
+- **Purpose** - Decrypt data, generate digital signatures, provide non-repudiation
+- **Format** - PKCS P12
+- **File Extension** - `.pfx` (personal information exchange)
+- **Security** - Must be kept secret and secure
 
-Encryption
-- Level
-- Full-Disk Encryption (FDE): encrypts entire storage device. Can store keys with Trusted Platform Module (TPM). Encryption algorithms: AES, Serpent, Twofish, Veracrypt
-- File encryption: Encrypted File System (EFS)
-- Volume Encryption
-- Database encryption
-- Record-level encryption: each record within a database is encrypted individually
-- Transport/Communication Encryption: Transport Layer Security (its predecessor is Secure Sockets Layer, SSL). Works with TCP/IP, used in HTTPS for web browsing
+**Key Escrow:**
+- **Definition** - Trusted third party for storing keys
+- **Storage** - Hardware Security Module (HSM)
+- **Purpose** - Backup and recovery of encrypted data
+- **Legal** - May be required for law enforcement access
 
-TLS steps: 
-- Handshake: sender and receiver agree on encryption parameters, exchange keys, and identify each other
-- Encryption: symmetric encryption keys
-- Transmission: travels through network devices
-- Decryption: data decrypted using same symmetric key
+</details>
 
-Asymmetric encryption
-- public and private keys
-- inefficient for large volumes
-- RSA, Diffie-Hellman, Elliptic Curve Cryptography (ECC)
+## Encryption Types
 
-Symmetric encryption
-- single key and block cipher
-- Data Encryption Standard (DES 56 bit), Triple Data Encryption Standard (3DES 168 bit), Advanced Encryption Standard (AES 256 bit)
+**Different approaches to protecting data confidentiality**
 
-Key Exchange: delivering keys from sender to receiver. Diffie-Hellman key exchange
+<details>
+<summary><strong>Encryption Levels</strong></summary>
 
-Algorithms: plaintext to ciphertext
+**Full-Disk Encryption (FDE):**
+- **Scope** - Encrypts entire storage device
+- **Key Storage** - Trusted Platform Module (TPM)
+- **Algorithms** - AES, Serpent, Twofish, VeraCrypt
+- **Benefits** - Protects all data on the device
 
-Key length: 
+**File Encryption:**
+- **Encrypted File System (EFS)** - Windows file-level encryption
+- **Individual Files** - Encrypt specific files or folders
+- **Selective Protection** - Choose what to encrypt
 
-Key longevity: Duration, typically 1 or 2 years
+**Volume Encryption:**
+- **Partition-Level** - Encrypt entire disk partitions
+- **Multiple Volumes** - Different encryption for different volumes
+- **Performance** - Better than file-level encryption
 
-Homomorphic encryption: allows for computations to be performed directly on encrypted data
+**Database Encryption:**
+- **Database-Level** - Encrypt entire database
+- **Record-Level** - Encrypt individual records within database
+- **Column-Level** - Encrypt specific database columns
 
-Tools:
-- TPM: Generates and stores keys, allows hardware-based authentication. Ensures integrity of boot processes.
-- HSM: Physical device for performing encryption and decryption operations.
-- Key management system: Software to create and store keys.
-- Secure enclave: Hardware-based, found in processors. Shield data and keys from software-based attacks.
+**Transport/Communication Encryption:**
+- **TLS/SSL** - Transport Layer Security (successor to SSL)
+- **HTTPS** - Secure web browsing
+- **TCP/IP** - Works with network protocols
 
-Obfuscation: deliberately making data more difficult to understand
-- Steganography: hide information in innocuous data
-- Tokenization: transform data into unique tokens
-- Data masking: replace original data with fake data
+</details>
 
-Hashing
-Condensed representation of data generated by a hash function. Function is one-way, cannot undo hash.
-Sha1 (160 bit), MD5 (128 bit)
+<details>
+<summary><strong>Symmetric Encryption</strong></summary>
 
-Reasons to use hashing:
-- Data integrity: ensure data has not been altered
-- Password security: 
+**Single key for both encryption and decryption**
 
-Salting: Adding random data before they are hashed.
+**Characteristics:**
+- **Speed** - Fast encryption and decryption
+- **Key Management** - Same key for both operations
+- **Efficiency** - Suitable for large data volumes
+- **Key Distribution** - Challenge of securely sharing keys
 
-Digital Signatures
-Signer uses their private key to generate a signature, which is attached to a document. Recipient uses signer's public key to validate the signature.
+**Common Algorithms:**
+- **DES** - Data Encryption Standard (56-bit, deprecated)
+- **3DES** - Triple DES (168-bit, legacy)
+- **AES** - Advanced Encryption Standard (128, 192, 256-bit)
+- **Blowfish** - Fast block cipher
+- **Twofish** - High security alternative to AES
 
-Key Stretching
-Transform a password into a more complex key.
-Implemented as:
-- Password-Based Key Derivation Function 2 (PBKDF2): Iterates through a hash function multiple times.
-- Bcrypt: Uses salt and multiple rounds of hashing
+**Use Cases:**
+- **Bulk Data Encryption** - Large files and databases
+- **Session Keys** - Temporary encryption keys
+- **Real-time Communication** - Streaming data encryption
 
-Blockchain
-Digital ledger that has data batches (blocks) distributed across many computers.
+</details>
 
-Open Public Ledger
-Public digital record of all transactions that have ever occured within the blockchain network.
+<details>
+<summary><strong>Asymmetric Encryption</strong></summary>
 
-Certificates
-Certificate Revocation Lists (CRLs), Online Certificate Status Protocol (OCSP)
+**Public and private key pair for encryption**
 
-Certificate Authorities (CA): online (convenient) vs offline (secure)
+**Characteristics:**
+- **Key Pair** - Public key encrypts, private key decrypts
+- **Efficiency** - Slower than symmetric encryption
+- **Key Distribution** - Public key can be freely shared
+- **Digital Signatures** - Private key creates signatures
 
-Root of trust: root key -> root certificate. If a certificate can be traced back to the root certificate, it can be considered secure
+**Common Algorithms:**
+- **RSA** - Rivest-Shamir-Adleman (most common)
+- **Diffie-Hellman** - Key exchange protocol
+- **ECC** - Elliptic Curve Cryptography (smaller keys)
+- **DSA** - Digital Signature Algorithm
 
-Certificate validity
-- CRLs: lists of certificates that are compromised
-- OCSP: real time check of CRL list
+**Use Cases:**
+- **Key Exchange** - Securely share symmetric keys
+- **Digital Signatures** - Verify authenticity and integrity
+- **Small Data** - Encrypt small amounts of data
+- **Certificate Validation** - Verify digital certificates
 
-Self-signed certificates, third party certificates, Certificate Signing Request (CSR) generation, Wildcard
+</details>
+
+## Transport Layer Security (TLS)
+
+**Secure communication protocol for data transmission**
+
+<details>
+<summary><strong>TLS Handshake Process</strong></summary>
+
+**Step 1: Client Hello**
+- Client initiates connection
+- Sends supported cipher suites
+- Includes random number
+
+**Step 2: Server Hello**
+- Server responds with chosen cipher suite
+- Sends its certificate
+- Includes random number
+
+**Step 3: Key Exchange**
+- Client generates pre-master secret
+- Encrypts with server's public key
+- Sends to server
+
+**Step 4: Session Establishment**
+- Both parties derive session keys
+- Symmetric encryption begins
+- Secure communication established
+
+</details>
+
+<details>
+<summary><strong>TLS Security Features</strong></summary>
+
+**Encryption:**
+- **Symmetric Keys** - Fast data encryption
+- **Perfect Forward Secrecy** - Session keys not derived from long-term keys
+- **Cipher Suites** - Negotiated encryption algorithms
+
+**Authentication:**
+- **Certificate Validation** - Verify server identity
+- **Mutual Authentication** - Both parties authenticate (optional)
+- **Certificate Pinning** - Trust specific certificates
+
+**Integrity:**
+- **Message Authentication Codes (MAC)** - Prevent tampering
+- **Hash Functions** - Verify data integrity
+- **Sequence Numbers** - Prevent replay attacks
+
+</details>
+
+## Key Management
+
+**Processes and procedures for handling cryptographic keys**
+
+<details>
+<summary><strong>Key Lifecycle</strong></summary>
+
+**Generation:**
+- **Cryptographically Secure** - Use proper random number generators
+- **Key Length** - Appropriate for security requirements
+- **Algorithm Compatibility** - Match key to encryption algorithm
+
+**Distribution:**
+- **Secure Channels** - Use secure methods to share keys
+- **Key Exchange Protocols** - Diffie-Hellman, RSA
+- **Certificate Authorities** - Trusted third parties
+
+**Storage:**
+- **Hardware Security Modules (HSM)** - Physical security devices
+- **Trusted Platform Module (TPM)** - Hardware-based key storage
+- **Key Management Systems** - Software for key administration
+
+**Rotation:**
+- **Key Longevity** - Typically 1-2 years for asymmetric keys
+- **Regular Updates** - Replace keys before expiration
+- **Grace Periods** - Allow time for transition
+
+**Destruction:**
+- **Secure Deletion** - Properly erase keys from storage
+- **Zeroization** - Clear all key material
+- **Audit Trail** - Document key destruction
+
+</details>
+
+<details>
+<summary><strong>Key Management Tools</strong></summary>
+
+**Hardware Security Module (HSM):**
+- **Physical Device** - Dedicated hardware for cryptographic operations
+- **Key Generation** - Creates and stores keys securely
+- **Encryption Operations** - Performs encryption/decryption
+- **Tamper Resistance** - Protects against physical attacks
+
+**Trusted Platform Module (TPM):**
+- **Hardware-Based** - Integrated into computer hardware
+- **Key Storage** - Secure storage for encryption keys
+- **Boot Integrity** - Ensures system hasn't been tampered with
+- **Authentication** - Hardware-based device authentication
+
+**Key Management System (KMS):**
+- **Software Solution** - Manages key lifecycle
+- **Centralized Control** - Single point of key administration
+- **Automation** - Automated key rotation and management
+- **Compliance** - Meets regulatory requirements
+
+**Secure Enclave:**
+- **Processor-Based** - Built into CPU architecture
+- **Isolated Environment** - Separate from main operating system
+- **Key Protection** - Shields keys from software attacks
+- **Apple/Intel** - Common implementations
+
+</details>
+
+## Hashing and Integrity
+
+**One-way functions for data integrity and verification**
+
+<details>
+<summary><strong>Hash Functions</strong></summary>
+
+**Characteristics:**
+- **One-Way** - Cannot reverse hash to original data
+- **Deterministic** - Same input always produces same output
+- **Avalanche Effect** - Small input change creates large output change
+- **Collision Resistance** - Difficult to find two inputs with same hash
+
+**Common Algorithms:**
+- **MD5** - Message Digest 5 (128-bit, deprecated)
+- **SHA-1** - Secure Hash Algorithm 1 (160-bit, deprecated)
+- **SHA-256** - SHA-2 family (256-bit, current standard)
+- **SHA-3** - Latest hash standard (variable length)
+
+**Applications:**
+- **Data Integrity** - Verify files haven't been modified
+- **Password Storage** - Store hashed passwords, not plaintext
+- **Digital Signatures** - Hash data before signing
+- **Blockchain** - Link blocks in cryptocurrency systems
+
+</details>
+
+<details>
+<summary><strong>Password Security</strong></summary>
+
+**Salting:**
+- **Random Data** - Add unique random data to each password
+- **Prevents Rainbow Tables** - Makes pre-computed attacks ineffective
+- **Unique Per User** - Each user gets different salt
+- **Stored With Hash** - Salt is stored alongside hash
+
+**Key Stretching:**
+- **PBKDF2** - Password-Based Key Derivation Function 2
+- **Multiple Iterations** - Run hash function thousands of times
+- **Computational Cost** - Makes brute force attacks slower
+- **Bcrypt** - Alternative with built-in salt and iterations
+
+**Best Practices:**
+- **Strong Passwords** - Require complex passwords
+- **Regular Updates** - Force password changes periodically
+- **Account Lockout** - Prevent brute force attacks
+- **Multi-Factor Authentication** - Additional security layer
+
+</details>
+
+## Digital Signatures
+
+**Cryptographic method for authentication and non-repudiation**
+
+<details>
+<summary><strong>Digital Signature Process</strong></summary>
+
+**Creation:**
+1. **Hash Data** - Create hash of document or message
+2. **Private Key** - Signer uses their private key
+3. **Encrypt Hash** - Encrypt hash with private key
+4. **Attach Signature** - Signature attached to document
+
+**Verification:**
+1. **Extract Hash** - Decrypt signature with public key
+2. **Hash Document** - Create hash of received document
+3. **Compare Hashes** - Verify hashes match
+4. **Authenticate** - Confirm signer's identity
+
+**Benefits:**
+- **Authentication** - Verify who signed the document
+- **Integrity** - Ensure document hasn't been altered
+- **Non-Repudiation** - Signer cannot deny signing
+- **Timestamp** - Prove when document was signed
+
+</details>
+
+## Certificate Management
+
+**Digital certificate lifecycle and validation**
+
+<details>
+<summary><strong>Certificate Authorities (CA)</strong></summary>
+
+**Types:**
+- **Root CA** - Top-level certificate authority
+- **Intermediate CA** - Subordinate to root CA
+- **Online CA** - Connected to network (convenient)
+- **Offline CA** - Air-gapped (more secure)
+
+**Functions:**
+- **Certificate Issuance** - Create and sign certificates
+- **Certificate Validation** - Verify certificate authenticity
+- **Certificate Revocation** - Invalidate compromised certificates
+- **Trust Chain** - Establish hierarchy of trust
+
+</details>
+
+<details>
+<summary><strong>Certificate Validation</strong></summary>
+
+**Certificate Revocation Lists (CRL):**
+- **Published Lists** - Lists of revoked certificates
+- **Periodic Updates** - Updated regularly by CA
+- **Offline Checking** - Can be downloaded and checked
+- **Size Limitations** - Can become very large
+
+**Online Certificate Status Protocol (OCSP):**
+- **Real-Time Checking** - Immediate certificate validation
+- **OCSP Responder** - Server that responds to status requests
+- **Efficient** - Only check specific certificates
+- **Privacy Concerns** - CA knows which certificates are being checked
+
+**Certificate Types:**
+- **Self-Signed** - Signed by the entity itself
+- **Third-Party** - Signed by trusted CA
+- **Wildcard** - Covers multiple subdomains
+- **Subject Alternative Name (SAN)** - Multiple domain names
+
+</details>
+
+## Advanced Cryptographic Concepts
+
+<details>
+<summary><strong>Homomorphic Encryption</strong></summary>
+
+**Allows computation on encrypted data without decryption**
+
+**Applications:**
+- **Secure Cloud Computing** - Process data while encrypted
+- **Privacy-Preserving Analytics** - Analyze data without revealing content
+- **Medical Research** - Share patient data securely
+- **Financial Services** - Secure financial calculations
+
+**Challenges:**
+- **Performance** - Much slower than regular encryption
+- **Complexity** - Difficult to implement correctly
+- **Limited Operations** - Not all operations supported
+- **Research Stage** - Still developing technology
+
+</details>
+
+<details>
+<summary><strong>Blockchain and Cryptography</strong></summary>
+
+**Cryptographic foundation of blockchain technology**
+
+**Components:**
+- **Digital Ledger** - Distributed record of transactions
+- **Blocks** - Batches of transactions with timestamps
+- **Hash Chains** - Each block linked to previous block
+- **Consensus** - Agreement on valid transactions
+
+**Cryptographic Elements:**
+- **Hash Functions** - Link blocks together
+- **Digital Signatures** - Verify transaction authenticity
+- **Public Key Cryptography** - Wallet addresses and transactions
+- **Mining** - Proof of work using cryptographic puzzles
+
+</details>
+
+<details>
+<summary><strong>Obfuscation Techniques</strong></summary>
+
+**Making data more difficult to understand**
+
+**Steganography:**
+- **Hidden Information** - Conceal data within other data
+- **Image Steganography** - Hide data in image files
+- **Audio Steganography** - Hide data in audio files
+- **Network Steganography** - Hide data in network protocols
+
+**Tokenization:**
+- **Data Replacement** - Replace sensitive data with tokens
+- **Reversible** - Can be converted back to original data
+- **PCI DSS Compliance** - Used in payment card processing
+- **Database Security** - Protect sensitive database fields
+
+**Data Masking:**
+- **Fake Data** - Replace real data with realistic fake data
+- **Development** - Use in test environments
+- **Compliance** - Meet data protection requirements
+- **Irreversible** - Cannot be converted back to original
+
+</details>
+
+---
+
+*Last updated: July 20, 2025*
