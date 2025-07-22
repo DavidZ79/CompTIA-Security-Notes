@@ -168,14 +168,11 @@ Security controls can also be classified by their function and timing:
 
 </details>
 
+> [!note] Vocab Bank
+> - **Closed-circuit television (CCTV)** - Video surveillance system for monitoring and recording
+> - **Security Information and Event Management (SIEM)** - Centralized platform for security monitoring and analysis
+> - **Standard operating procedures (SOP)** - Documented procedures for consistent operations
 
-
-> [!tip] Control Selection Considerations
-> - **Risk Level** - Match control strength to threat level
-> - **Cost-Benefit** - Balance security with operational efficiency  
-> - **Layered Defense** - Implement multiple controls for critical assets
-> - **User Impact** - Minimize disruption to legitimate users
-> - **Maintenance** - Consider ongoing support and update requirements
 ---
 
 *Last updated: July 20 2025*

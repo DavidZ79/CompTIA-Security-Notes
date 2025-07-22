@@ -74,6 +74,38 @@ The three fundamental principles of information security that every security pro
 
 </details>
 
+## Non-Repudiation
+
+**Ensuring that parties cannot deny their involvement in actions or transactions**
+
+<details>
+<summary><strong>Digital Signatures</strong></summary>
+
+- **Cryptographic Identifiers** - Unique digital signatures for documents and transactions
+- **Certificate-Based Signatures** - PKI-based digital signatures
+- **Timestamp Services** - Verifying when signatures were created
+- **Signature Verification** - Validating signature authenticity
+
+</details>
+
+<details>
+<summary><strong>Audit Trails</strong></summary>
+
+- **Comprehensive Logging** - Log all actions with timestamps and user identification
+- **Immutable Logs** - Ensure logs cannot be modified or deleted
+- **Chain of Custody** - Track the complete lifecycle of actions
+- **Digital Evidence** - Preserve evidence for legal proceedings
+
+</details>
+
+<details>
+<summary><strong>Access controls</strong></summary>
+
+- **Screenshots and Recordings** - Visual evidence of activities
+- **System Logs** - Technical logs from all affected systems
+
+</details>
+
 ## Authentication, Authorization, and Accounting (AAA)
 
 The AAA framework provides comprehensive access control and accountability:
@@ -137,40 +169,6 @@ The AAA framework provides comprehensive access control and accountability:
 
 </details>
 
-## Non-Repudiation
-
-**Ensuring that parties cannot deny their involvement in actions or transactions**
-
-<details>
-<summary><strong>Digital Signatures</strong></summary>
-
-- **Cryptographic Identifiers** - Unique digital signatures for documents and transactions
-- **Certificate-Based Signatures** - PKI-based digital signatures
-- **Timestamp Services** - Verifying when signatures were created
-- **Signature Verification** - Validating signature authenticity
-
-</details>
-
-<details>
-<summary><strong>Audit Trails</strong></summary>
-
-- **Comprehensive Logging** - Log all actions with timestamps and user identification
-- **Immutable Logs** - Ensure logs cannot be modified or deleted
-- **Chain of Custody** - Track the complete lifecycle of actions
-- **Digital Evidence** - Preserve evidence for legal proceedings
-
-</details>
-
-<details>
-<summary><strong>Evidence Collection</strong></summary>
-
-- **Screenshots and Recordings** - Visual evidence of activities
-- **System Logs** - Technical logs from all affected systems
-- **Witness Statements** - Human verification of critical actions
-- **Forensic Analysis** - Detailed examination of digital evidence
-
-</details>
-
 ## Gap Analysis
 
 **Identifying the difference between current and desired security posture**
@@ -206,9 +204,6 @@ The AAA framework provides comprehensive access control and accountability:
 
 - **Verify Every Access** - No access is trusted by default
 - **Least Privilege Access** - Grant minimal necessary access
-- **Continuous Monitoring** - Monitor all activities in real-time
-- **Micro-segmentation** - Isolate systems and networks
-- **Assume Breach** - Plan for and detect security incidents
 
 </details>
 
@@ -316,6 +311,15 @@ The AAA framework provides comprehensive access control and accountability:
 - Prevents malware communication with command and control servers
 
 </details>
+
+> [!note] Vocab Bank
+> - **Security Identifier (SID)** - Unique identifier for users, groups, and computers in Windows systems
+> - **MITRE ATT&CK** - Knowledge base of adversary tactics, techniques, and procedures used for threat modeling
+> - **CVE list** - Common Vulnerabilities and Exposures database of publicly known security vulnerabilities
+> - **OAuth** - Open standard authorization protocol for secure third-party access to resources
+> - **SAML token** - Security Assertion Markup Language token for single sign-on authentication
+> - **SWOT analysis** - Strategic planning tool analyzing Strengths, Weaknesses, Opportunities, and Threats
+> - **IDS log** - Intrusion Detection System log containing security event records and alerts
 
 ---
 

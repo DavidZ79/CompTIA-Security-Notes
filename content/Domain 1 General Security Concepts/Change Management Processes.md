@@ -32,8 +32,6 @@ tags:
 **Clear assignment of responsibility for change management**
 
 - **Change Owner** - Overall accountability for change success and final decision authority, likely Chief Information Security Officer (CISO)
-- **Security Owner** - Security oversight, risk assessment, compliance verification, incident response
-- **Technical Owner** - Implementation responsibility, system knowledge, technical risk assessment
 
 </details>
 
@@ -56,7 +54,6 @@ tags:
 **Comprehensive assessment of change effects on security and operations**
 
 - **Security Impact** - Vulnerability analysis, access control review, data protection, compliance impact
-- **Technical Impact** - System dependencies, performance impact, integration points, backup requirements
 - **Business Impact** - Operational disruption, user impact, downtime planning, rollback planning
 
 </details>
@@ -66,7 +63,6 @@ tags:
 
 **Validation of change functionality and security**
 
-- **Functional Testing** - System testing, integration testing, user acceptance testing, performance testing
 - **Security Testing** - Vulnerability assessment, penetration testing, code review, configuration review
 
 </details>
@@ -76,19 +72,12 @@ tags:
 
 **Procedures for reverting changes if problems occur**
 
-- **Backout Triggers** - System failures, performance issues, security incidents, user complaints
-- **Backout Process** - Immediate actions, system restoration, data recovery, communication plan
-- **Backout Testing** - Regular testing, documentation, training, validation
-
 </details>
 
 <details>
 <summary><strong>Maintenance Window</strong></summary>
 
 **Scheduled time periods for implementing changes**
-
-- **Window Planning** - Downtime scheduling, user notification, resource coordination, contingency planning
-- **Window Execution** - Pre-window checklist, implementation steps, monitoring, post-window validation
 
 </details>
 
@@ -133,19 +122,12 @@ tags:
 
 **Periods when systems are unavailable during changes**
 
-- **Planned Downtime** - Scheduled maintenance, system upgrades, configuration changes, security updates
-- **Unplanned Downtime** - System failures, change failures, security incidents, infrastructure issues
-- **Downtime Management** - Communication, minimization, business continuity, recovery procedures
-
 </details>
 
 <details>
 <summary><strong>Service Restart</strong></summary>
 
 **Restarting services affected by changes**
-
-- **Service Restart Planning** - Dependency analysis, restart order, timing, validation
-- **Service Restart Process** - Pre-restart checks, graceful shutdown, startup sequence, post-restart validation
 
 </details>
 

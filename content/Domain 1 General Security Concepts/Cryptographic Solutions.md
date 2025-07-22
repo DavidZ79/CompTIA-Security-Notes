@@ -47,31 +47,12 @@ tags:
 <details>
 <summary><strong>Encryption Levels</strong></summary>
 
-**Full-Disk Encryption (FDE):**
-- **Scope** - Encrypts entire storage device
-- **Key Storage** - Trusted Platform Module (TPM)
-- **Algorithms** - AES, Serpent, Twofish, VeraCrypt
-- **Benefits** - Protects all data on the device
-
-**File Encryption:**
-- **Encrypted File System (EFS)** - Windows file-level encryption
-- **Individual Files** - Encrypt specific files or folders
-- **Selective Protection** - Choose what to encrypt
-
-**Volume Encryption:**
-- **Partition-Level** - Encrypt entire disk partitions
-- **Multiple Volumes** - Different encryption for different volumes
-- **Performance** - Better than file-level encryption
-
-**Database Encryption:**
-- **Database-Level** - Encrypt entire database
-- **Record-Level** - Encrypt individual records within database
-- **Column-Level** - Encrypt specific database columns
-
-**Transport/Communication Encryption:**
-- **TLS/SSL** - Transport Layer Security (successor to SSL)
-- **HTTPS** - Secure web browsing
-- **TCP/IP** - Works with network protocols
+- **FDE** - Full-Disk Encryption that protects entire storage devices including operating system and all data
+- **File encryption** - Individual file or folder encryption allowing selective protection of specific data
+- **Volume encryption** - Partition-level encryption that secures entire disk volumes or partitions
+- **Database encryption** - Application-level encryption protecting database files, tables, or entire databases
+- **Record-level encryption** - Granular encryption of individual database records or rows for maximum security
+- **Transport/Communication encryption** - Network-level encryption protecting data in transit between systems
 
 </details>
 
@@ -125,6 +106,54 @@ tags:
 
 </details>
 
+## Cryptographic Tools
+
+**Hardware and software solutions for cryptographic operations**
+
+<details>
+<summary><strong>Trusted Platform Module (TPM)</strong></summary>
+
+**Hardware security chip for cryptographic operations**
+
+</details>
+
+<details>
+<summary><strong>Hardware Security Module (HSM)</strong></summary>
+
+**Dedicated hardware for key management and cryptographic operations**
+
+</details>
+
+<details>
+<summary><strong>Secure Enclave</strong></summary>
+
+**Isolated processing environment for sensitive operations**
+
+**Applications:**
+- **Mobile Security** - Apple Secure Enclave, Android TrustZone
+- **Cloud Computing** - Intel SGX, AMD SEV
+- **IoT Security** - Secure processing for embedded devices
+- **Digital Rights Management** - Protected content processing
+
+</details>
+
+## Additional Cryptographic Concepts
+
+### Obfuscation
+Making data or code more difficult to understand or reverse-engineer, often used to protect intellectual property or hide sensitive logic.
+
+### Salting
+Adding random data (a "salt") to passwords or other inputs before hashing, to ensure unique hash outputs and defend against precomputed attacks like rainbow tables.
+
+### Digital Signatures
+Cryptographic technique that uses a private key to sign data, providing proof of origin, integrity, and non-repudiation for digital documents or messages.
+
+### Key Stretching
+Process of strengthening weak or short cryptographic keys (often passwords) by applying a computationally intensive algorithm (like PBKDF2, bcrypt, or scrypt) to make brute-force attacks more difficult.
+
+### Open/Public Ledger
+A distributed, transparent database (such as blockchain) where transactions are recorded in a way that is visible and verifiable by all participants, ensuring integrity and trust without a central authority.
+
 ## Transport Layer Security (TLS)
 
 **Secure communication protocol for data transmission**
@@ -154,25 +183,7 @@ tags:
 
 </details>
 
-<details>
-<summary><strong>TLS Security Features</strong></summary>
 
-**Encryption:**
-- **Symmetric Keys** - Fast data encryption
-- **Perfect Forward Secrecy** - Session keys not derived from long-term keys
-- **Cipher Suites** - Negotiated encryption algorithms
-
-**Authentication:**
-- **Certificate Validation** - Verify server identity
-- **Mutual Authentication** - Both parties authenticate (optional)
-- **Certificate Pinning** - Trust specific certificates
-
-**Integrity:**
-- **Message Authentication Codes (MAC)** - Prevent tampering
-- **Hash Functions** - Verify data integrity
-- **Sequence Numbers** - Prevent replay attacks
-
-</details>
 
 ## Key Management
 
@@ -423,6 +434,21 @@ tags:
 
 </details>
 
+> [!note] Vocab Bank
+> - **TPM** - Trusted Platform Module, hardware security chip for cryptographic operations
+> - **HSM** - Hardware Security Module, dedicated hardware for key management and crypto operations
+> - **CA** - Certificate Authority, trusted entity that issues and manages digital certificates
+> - **PKCS** - Public Key Cryptography Standards, set of standards for public key infrastructure
+> - **EFS** - Encrypting File System, Windows feature for file-level encryption
+> - **AES** - Advanced Encryption Standard, symmetric encryption algorithm
+> - **NIST** - National Institute of Standards and Technology, sets cryptographic standards
+> - **RSA** - Rivest-Shamir-Adleman, asymmetric encryption algorithm
+> - **PBKDF2** - Password-Based Key Derivation Function 2, for deriving keys from passwords
+> - **CRL** - Certificate Revocation List, list of revoked digital certificates
+> - **OCSP** - Online Certificate Status Protocol, real-time certificate validation
+> - **CSR** - Certificate Signing Request, request for digital certificate issuance
+> - **TLS/SSL** - Transport Layer Security/Secure Sockets Layer, protocols for secure communication over networks
+> - **Homomorphic Encryption** - Allows computation on encrypted data without decryption, enabling secure cloud processing
 ---
 
 *Last updated: July 20, 2025*
