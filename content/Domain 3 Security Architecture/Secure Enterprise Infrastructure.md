@@ -62,3 +62,30 @@ Network Appliances
 - Reverse proxy server: in DMZ to secure session and filter incoming traffic
 - IPS and IDS
 - Load balancer: least utilized host, affinity, DNS round robin
+
+Port Security
+- Sticky MAC
+- Disabling ports
+- 802.1x authentication
+- Extensible Authentication Protocol (EAP)
+
+Firewall Types
+- WAF
+- UTM
+- NGFW
+- Layer 4
+- Layer 7
+
+Secure Communication/Access
+
+VPN
+
+Remote Access: SSH, RDP
+
+Tunneling
+- TLS
+- IPSec: AH, ESP
+
+Software-Defined WAN
+
+Secure Acess Service Edge
