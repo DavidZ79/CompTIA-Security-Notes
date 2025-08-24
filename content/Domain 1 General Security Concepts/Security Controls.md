@@ -4,7 +4,6 @@ description: Compare and contrast various types of security controls and their i
 draft: false
 
 tags:
-  - CompTIA
   - Domain 1
   - Security Controls
   - CIA Triad

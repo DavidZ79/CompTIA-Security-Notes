@@ -3,7 +3,6 @@ title: 📋 Change Management Processes
 description: Business processes impacting security operations including approval processes, ownership, stakeholders, and technical implications
 draft: false
 tags:
-  - CompTIA
   - Domain 1
   - Change Management
   - Security Processes

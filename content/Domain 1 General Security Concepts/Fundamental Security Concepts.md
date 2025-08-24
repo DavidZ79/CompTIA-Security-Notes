@@ -4,7 +4,6 @@ description: Core security concepts including CIA triad, AAA framework, non-repu
 draft: false
 
 tags:
-  - CompTIA
   - Domain 1
   - Security Concepts
   - CIA Triad
@@ -311,6 +310,13 @@ The AAA framework provides comprehensive access control and accountability:
 - Prevents malware communication with command and control servers
 
 </details>
+
+## Sensor Types
+
+- **Infrared** - Detect heat signatures and movement through infrared radiation
+- **Pressure** - Detect weight or pressure changes on surfaces or objects
+- **Microwave** - Use microwave signals to detect motion and presence
+- **Ultrasonic** - Emit high-frequency sound waves to detect movement and distance
 
 > [!note] Vocab Bank
 > - **Security Identifier (SID)** - Unique identifier for users, groups, and computers in Windows systems

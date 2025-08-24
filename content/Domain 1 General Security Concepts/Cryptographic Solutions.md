@@ -3,7 +3,6 @@ title: 🔑 Cryptographic Solutions
 description: Comprehensive guide to cryptographic solutions including PKI, encryption, hashing, digital signatures, and key management for CompTIA Security+
 draft: false
 tags:
-  - CompTIA
   - Domain 1
   - Cryptography
   - PKI
