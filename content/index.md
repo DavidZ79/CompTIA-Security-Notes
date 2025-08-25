@@ -53,7 +53,7 @@ Caution of unreputable textbook authors on Amazon, as they often mostly contain 
 They are poorly made with Amazon's digital publishing service so they can slap on a price tag.
 
 ### [CompTIA Security+ Exam Prep app](https://play.google.com/store/apps/details?id=com.simple.comptiasecurityplus&hl=en_CA)
-The Duolingo of security+
+The Duolingo of security+ <img src="/static/duo.png" alt="Duo Security Mascot" style="width: 20px; height: 20px; vertical-align: middle;">
 
 
 ### [IT Certification Roadmap](https://partners.comptia.org/docs/default-source/resources/it-certification-roadmap-8-5x11-print0c3c382c09d76fc19da8ff0a002c2329)
