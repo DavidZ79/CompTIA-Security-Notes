@@ -52,8 +52,14 @@ He also occasionally hosts [live exam review sessions 🔗](https://www.youtube.
 Caution of unreputable textbook authors on Amazon, as they often mostly contain shallow or AI generated content. 
 They are poorly made with Amazon's digital publishing service so they can slap on a price tag.
 
+### [CompTIA Security+ Exam Prep app](https://play.google.com/store/apps/details?id=com.simple.comptiasecurityplus&hl=en_CA)
+The Duolingo of security+
+
+
 ### [IT Certification Roadmap](https://partners.comptia.org/docs/default-source/resources/it-certification-roadmap-8-5x11-print0c3c382c09d76fc19da8ff0a002c2329)
 A little bit outdated, but gives a general understanding of certification progression/difficulty.
+
+
 
 Here's a sentence with a footnote. [^1]
 
@@ -72,6 +78,5 @@ Here's a sentence with a footnote. [^1]
 - add this repo to portfolio
 - notes ordering in dir
 - BUG global search doesnt work for words under collapsible sections 
-- include phone app as resource
 - 601 vs 701
 - tips on studying: make sure study resources cover precisely what is on the exam objectives
