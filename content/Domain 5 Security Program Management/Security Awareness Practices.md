@@ -1,5 +1,5 @@
 ---
-title: Security Awareness Practices
+title: 🧠 Security Awareness Practices
 description:
 draft: false
 tags:
