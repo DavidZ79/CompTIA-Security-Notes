@@ -1,18 +1,9 @@
-# Quartz v4
+README: David's CompTIA Security+ SY0-701 Study Notes
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Welcome! These are my personal study notes for the CompTIA Security+ SY0-701 exam, built using Quartz. They cover the five exam domains—from general security fundamentals to security governance and risk management. More details on notes home page linked below.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+[Link to site](https://davidz79.github.io/CompTIA-Security-Notes/)
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+Run locally: ```npx quartz build --serve```
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Uses [Quartz 4](https://quartz.jzhao.xyz/) library
