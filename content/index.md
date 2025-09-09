@@ -47,7 +47,7 @@ They are relatively short and concise, and are great for conveying the ideas of 
 He also occasionally hosts [live exam review sessions 🔗](https://www.youtube.com/watch?v=wwr8dobMLiQ) with previous exam problems on his YouTube channel.
 
 ### [Ian Neil's SY0-701 Certification Guide 🔗](https://www.amazon.ca/dp/1835461530?ref=ppx_yo2ov_dt_b_fed_asin_title)
-*CompTIA Security+ SY0-701 Certification Guide - Third Edition* is my preferred textbook, and is my primary resource in studying for this exam. 
+*CompTIA Security+ SY0-701 Certification Guide - Third Edition* is my preferred textbook, and is my primary resource in studying for this exam. Somewhat dense and repetitive, but fairly well organized and includes practice questions + solutions after each chapter.
 
 Caution of unreputable textbook authors on Amazon, as they often mostly contain shallow or AI generated content. 
 They are poorly made with Amazon's digital publishing service so they can slap on a price tag.
@@ -59,11 +59,9 @@ The Duolingo of security+ <img src="/static/duo.png" alt="Duo Security Mascot" s
 ### [IT Certification Roadmap](https://partners.comptia.org/docs/default-source/resources/it-certification-roadmap-8-5x11-print0c3c382c09d76fc19da8ff0a002c2329)
 A little bit outdated, but gives a general understanding of certification progression/difficulty.
 
+Note that Exam 601 has become outdated since July 2024, and Exam 701 is the current exam (since 2025-09-08). Exam 601 has many more exam objectives, [^1] but the same exam domains.
 
-
-Here's a sentence with a footnote. [^1]
-
-[^1]: This is the footnote.
+[^1]: The most important resource to study is the exam objectives.
 
 
 
@@ -71,12 +69,6 @@ Here's a sentence with a footnote. [^1]
 
 ## TODO
 
-- more about why textbook is great, exercise questions
-- write README npx quartz build --serve
 - clean up tags/graph
-- add my repo to the existing display repos of quartz
-- add this repo to portfolio
-- notes ordering in dir
 - BUG global search doesnt work for words under collapsible sections 
-- 601 vs 701
-- tips on studying: make sure study resources cover precisely what is on the exam objectives
+- explorer dropdown different sizes
